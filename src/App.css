@@ -1,0 +1,37 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-content {
+    display: flex;
+    flex: 1;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 16px; 
+    background-color:#F9F9F9;
+    margin-top: 56px
+    ;
+  }
+
+
+  /* styles.css */
+.scroll-container {
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
