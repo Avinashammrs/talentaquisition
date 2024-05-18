@@ -1,6 +1,6 @@
 // AssessmentCard.js
 import React from 'react';
-import { Card, CardContent, Typography, Button, Grid } from '@mui/material';
+import { Card, Typography, Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 
