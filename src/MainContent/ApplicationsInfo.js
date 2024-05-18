@@ -1,6 +1,7 @@
 import React from 'react';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, LineElement, PointElement, Title, Tooltip, Legend } from 'chart.js';
-import { Bar } from 'react-chartjs-2';
+import { Chart } from 'react-chartjs-2';
+
 
 ChartJS.register(
   CategoryScale,
@@ -22,7 +23,7 @@ const data = {
       backgroundColor: '#277ACC',
       borderColor: '#277ACC',
       data: [65, 59, 80, 81, 56, 55, 40, 50, 60, 70, 80, 90],
-     order:2
+      order: 2
     },
     {
       type: 'line',
@@ -31,12 +32,10 @@ const data = {
       borderColor: '#002B55',
       fill: false,
       data: [35, 49, 60, 71, 46, 45, 30, 40, 50, 60, 70, 80],
-     order: 1
+      order: 1
     }
   ]
 };
-
-
 
 const options = {
   responsive: true,
@@ -71,7 +70,7 @@ const ApplicationsInfo = () => {
   return (
     <div className="applications-info">
       <h2>Applications Info</h2>
-      <Bar data={data} options={options} />
+      <Chart type="bar" data={data} options={options} />
     </div>
   );
 };
