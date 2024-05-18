@@ -1,5 +1,5 @@
 import React from 'react';
-import { Drawer, List, ListItem, ListItemIcon, ListItemText, IconButton } from '@mui/material';
+import { Drawer, List, ListItem, ListItemIcon} from '@mui/material';
 import DashboardIcon from './Icons/Dashboard.png';
 import FileIcon from './Icons/File.png';
 import InterviewIcon from './Icons/Interview.png';
@@ -30,9 +30,8 @@ const Sidebar = () => {
     sx={{
       width: 125,
       flexShrink: 0,
-      [`& .MuiDrawer-paper`]: { width: 125, boxSizing: 'border-box' },
-      top: '190px', 
-      '& .MuiDrawer-paper': { top: '190px' } 
+      [`& .MuiDrawer-paper`]: { boxSizing: 'border-box',top: '190px'},
+      top: '190px'
     }}
   >
     <List>

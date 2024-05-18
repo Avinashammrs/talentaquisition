@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-import { AppBar, Toolbar, Typography, IconButton, InputBase, Badge, Box } from '@mui/material';
+import { AppBar, Toolbar, IconButton, InputBase, Badge, Box } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import NotificationsIcon from '@mui/icons-material/Notifications';
