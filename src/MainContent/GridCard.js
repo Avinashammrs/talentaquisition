@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
-import { TextField, Button, Box, Typography } from '@mui/material';
+import { TextField, Button, Box, Typography , Grid, InputBase,IconButton, Divider} from '@mui/material';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
+import SearchIcon from '@mui/icons-material/Search';
 
 const Gridcard = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -27,7 +28,9 @@ const Gridcard = () => {
     { jobId: '#003', name: 'Johnson Smith', position: 'Python Developer', firstLevel: '6/10', secondLevel: '7/10', thirdLevel: '3/10', fourthLevel: '...', totalMarks: '...', status: 'Active' },
     { jobId: '#004', name: 'Stella', position: 'Android Developer', firstLevel: '6/10', secondLevel: '2/10', thirdLevel: '✖', fourthLevel: '✖', totalMarks: '8/40', status: 'Reject' },
     { jobId: '#005', name: 'Randy', position: 'IOS Developer', firstLevel: '6/10', secondLevel: '7/10', thirdLevel: '3/10', fourthLevel: '...', totalMarks: '...', status: 'Active' },
-    { jobId: '#006', name: 'John Doe', position: 'Junior Designer', firstLevel: '6/10', secondLevel: '7/10', thirdLevel: '3/10', fourthLevel: '...', totalMarks: '...', status: 'Active' }
+    { jobId: '#006', name: 'John Doe', position: 'Junior Designer', firstLevel: '6/10', secondLevel: '7/10', thirdLevel: '3/10', fourthLevel: '...', totalMarks: '...', status: 'Active' },
+    { jobId: '#007', name: 'John Doe', position: 'Junior Designer', firstLevel: '6/10', secondLevel: '7/10', thirdLevel: '3/10', fourthLevel: '...', totalMarks: '...', status: 'Active' },
+  
   ];
 
   const handleSearchChange = (event) => {
@@ -53,20 +56,40 @@ const Gridcard = () => {
   }
 
   return (
-    <Box p={3} className="ag-theme-alpine" style={{ height: 500, width: '100%' }}>
-      <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
-        <Typography variant="h4">Candidate Status</Typography>
-        <Button variant="outlined" startIcon={<FilterAltIcon />}>Filters</Button>
-      </Box>
-      <Box display="flex" justifyContent="space-between" mb={2}>
-        <Typography variant="h6">View All</Typography>
-        <TextField
-          label="Search"
-          variant="outlined"
-          value={searchTerm}
-          onChange={handleSearchChange}
-        />
-      </Box>
+    <Box p={0} className="ag-theme-alpine" style={{ height: 500, width: '100%' }}>
+
+      <Grid container spacing={2} alignItems="center">
+        <Grid item xs={12} sm={6}>
+          <Typography variant="h5">Candidate Status</Typography>
+        </Grid>
+        <Grid item xs={12} sm={3}>
+          <InputBase
+            placeholder="Search"
+            inputProps={{ 'aria-label': 'search' }}
+            endAdornment={
+              <IconButton size="small" sx={{ p: '8px' }} aria-label="search">
+                <SearchIcon />
+              </IconButton>
+            }
+            fullWidth
+            style={{
+              backgroundColor: '#FFFFFF',
+              height: '45px',
+              color: 'black',
+              padding: '8px',
+              boxShadow: '2px 2px 2px 2px rgba(0, 0, 0, 0.1)',
+              float:'right'
+            }}
+            onChange={handleSearchChange}
+            value={searchTerm}
+          />
+        </Grid>
+        <Grid item xs={12} sm={3}>
+          <Button style={{width:"100%",height:"45px"}} variant="outlined" startIcon={<FilterAltIcon />}>Filters</Button>
+        </Grid>
+      </Grid>
+      <Divider  style={{padding:4}}/>
+      <div style={{padding:8}}>
       <AgGridReact
         columnDefs={columnDefs}
         rowData={rowData}
@@ -74,6 +97,8 @@ const Gridcard = () => {
         paginationPageSize={10}
         domLayout="autoHeight"
       />
+      </div>
+     
     </Box>
   );
 };

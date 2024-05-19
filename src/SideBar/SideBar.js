@@ -28,16 +28,15 @@ const Sidebar = () => {
     <Drawer
     variant="permanent"
     sx={{
-      width: 125,
+      width: 50,
       flexShrink: 0,
-      [`& .MuiDrawer-paper`]: { boxSizing: 'border-box',top: '190px'},
-      top: '190px'
+      [`& .MuiDrawer-paper`]: { boxSizing: 'border-box',top: '190px'}
     }}
   >
     <List>
         {menuItems.map((item, index) => (
           <ListItem button key={item.text}>
-            <ListItemIcon>
+            <ListItemIcon style={{minWidth:0}}>
               <img src={item.icon} alt={item.text} style={{ width: '24px', height: '24px' }} />
             </ListItemIcon>
           </ListItem>
