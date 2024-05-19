@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Typography, Avatar, Button, Table, TableBody, TableCell, TableContainer, TableRow, Box, Grid } from '@mui/material';
+import { Card, Typography, Avatar, Button, Table, TableBody, TableCell, TableContainer, TableRow, Box } from '@mui/material';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import { styled } from '@mui/system';
@@ -25,15 +25,9 @@ const Header = styled(Box)(({ theme }) => ({
   minHeight: 250
 }));
 
-const ActionButtons = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  justifyContent: 'space-between',
-  //width: '100%',
-  marginTop: theme.spacing(0),
-}));
 
 const InterviewCard = ({ candidate }) => {
-  const { name, role, avatar, date, time, levels, meetVia, attendees } = candidate;
+  const { name, role, avatar, date, time, levels } = candidate;
 
   return (
     <StyledCard>
