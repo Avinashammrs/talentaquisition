@@ -1,13 +1,6 @@
 import React from 'react';
 import { Card, CardContent, Typography, Box, Avatar } from '@mui/material';
-import { styled } from '@mui/system';
 
-const ActionButtons = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  justifyContent: 'space-between',
-  width: '100%',
-  marginTop: theme.spacing(2)
-}));
 
 const JobCard = ({ job }) => {
   return (
