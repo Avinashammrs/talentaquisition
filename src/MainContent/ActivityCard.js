@@ -9,7 +9,21 @@ const activities = [
     interviewer: 'Stella',
     avatar: 'https://randomuser.me/api/portraits/men/1.jpg',
   },
-  // Add more activities as needed
+  {
+    name: 'John Doe',
+    role: 'Python Developer',
+    time: '19 mins ago',
+    interviewer: 'Stella',
+    avatar: 'https://randomuser.me/api/portraits/men/2.jpg',
+  },
+  {
+    name: 'John Doe',
+    role: 'Python Developer',
+    time: '19 mins ago',
+    interviewer: 'Stella',
+    avatar: 'https://randomuser.me/api/portraits/men/3.jpg',
+  },
+ 
 ];
 
 const Activity = () => {

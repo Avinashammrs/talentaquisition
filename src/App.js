@@ -9,16 +9,15 @@ function App() {
   return (
     <div className="dashboard">
       <Header />
-     
-      <div className="main-content">
-      <Sidebar />
-        {/* Add main content area here */}
-        <div className="content">
-          {/* Your content goes here */}
-          
-         <MainContent />
-        </div>
+      <div style={{ display: 'flex', width: '100%' }}>
+      <div style={{ width: '3%' }}>
+        <Sidebar />
       </div>
+      <div style={{ width: '97%' }}>
+        <MainContent />
+      </div>
+    </div>
+
     </div>
   );
 }

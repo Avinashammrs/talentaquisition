@@ -1,4 +1,5 @@
 import React from 'react';
+import { Card, CardContent, Typography } from '@mui/material';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -52,39 +53,45 @@ const data = {
 
 const options = {
   responsive: true,
+  maintainAspectRatio: false,
   plugins: {
     legend: {
       position: 'top',
     },
     title: {
       display: false,
-      text: 'Applications Info',
     },
   },
   scales: {
     x: {
       type: 'category',
-      title: {
-        display: false,
-        text: 'Month',
-      },
     },
     y: {
       type: 'linear',
-      title: {
-        display: false,
-        text: 'Applications',
-      },
     },
   },
 };
 
 const ApplicationsInfo = () => {
   return (
-    <div className="applications-info">
-      <h2>Applications Info</h2>
-      <Chart type="bar" data={data} options={options} />
-    </div>
+    <Card
+      sx={{
+        width: '100%',
+        height: '383px',
+        borderRadius: '10px',
+        boxShadow: 3,
+        backgroundColor: '#fff',
+      }}
+    >
+      <CardContent>
+        <Typography variant="h6" component="div" gutterBottom>
+          Application's Info
+        </Typography>
+        <div style={{ height: '300px' }}>
+          <Chart type="bar" data={data} options={options} />
+        </div>
+      </CardContent>
+    </Card>
   );
 };
 

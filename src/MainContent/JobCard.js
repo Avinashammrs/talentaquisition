@@ -1,11 +1,19 @@
-// JobCard.js
 import React from 'react';
-import { Card, CardContent, Typography, Box } from '@mui/material';
+import { Card, CardContent, Typography, Box, Avatar } from '@mui/material';
+import { styled } from '@mui/system';
+
+const ActionButtons = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  justifyContent: 'space-between',
+  width: '100%',
+  marginTop: theme.spacing(2)
+}));
 
 const JobCard = ({ job }) => {
   return (
-    <Card>
-      <CardContent>
+    <Card style={{ margin: '8px' }}> 
+      <CardContent> 
+        <Avatar src={job.icon} alt={job.title} />
         <Typography variant="h6" component="div">
           {job.title}
         </Typography>

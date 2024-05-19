@@ -5,10 +5,40 @@ const candidates = [
   {
     name: 'John Doe',
     role: 'Senior Python Developer',
-    avatar: 'https://randomuser.me/api/portraits/men/1.jpg',
+    avatar: 'https://randomuser.me/api/portraits/men/4.jpg',
     status: 'Hired',
   },
-  // Add more candidates as needed
+  {
+    name: 'John Doe',
+    role: 'Senior Python Developer',
+    avatar: 'https://randomuser.me/api/portraits/men/5.jpg',
+    status: 'Hired',
+  },
+  {
+    name: 'John Doe',
+    role: 'Senior Python Developer',
+    avatar: 'https://randomuser.me/api/portraits/men/6.jpg',
+    status: 'Hired',
+  },
+  {
+    name: 'John Doe',
+    role: 'Senior Python Developer',
+    avatar: 'https://randomuser.me/api/portraits/women/9.jpg',
+    status: 'Hired',
+  },
+  {
+    name: 'John Doe',
+    role: 'Senior Python Developer',
+    avatar: 'https://randomuser.me/api/portraits/women/8.jpg',
+    status: 'Hired',
+  },
+  {
+    name: 'John Doe',
+    role: 'Senior Python Developer',
+    avatar: 'https://randomuser.me/api/portraits/women/10.jpg',
+    status: 'Hired',
+  },
+ 
 ];
 
 const HiringCandidates = () => {

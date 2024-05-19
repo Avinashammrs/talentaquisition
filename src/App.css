@@ -2,18 +2,9 @@
     display: flex;
     flex-direction: column;
   }
-  
-  .main-content {
-    display: flex;
-    flex: 1;
-  }
-  
-  .content {
-    flex: 1;
-    padding: 16px; 
-    background-color:#F9F9F9;
-    margin-top: 56px
-    ;
+
+  .center-align {
+    text-align: center;
   }
 
 
